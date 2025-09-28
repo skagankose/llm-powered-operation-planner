@@ -302,4 +302,4 @@ docker-compose -f docker-compose.prod.yml up
 
 ## License
 
-Open source - feel free to modify and extend!
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
