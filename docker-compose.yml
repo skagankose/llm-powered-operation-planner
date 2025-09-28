@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  drone-simulation:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: llm-powered-operation-planning
+    environment:
+      # Load environment variables from .env file
+      - API_KEY=${API_KEY}
+      # Disable visualization in container by default (can be overridden)
+      - ENABLE_VISUALIZATION=${ENABLE_VISUALIZATION:-false}
+      # Set mock mode if no API key provided
+      - MOCK_LLM_RESPONSE=${MOCK_LLM_RESPONSE:-false}
+    env_file:
+      - .env
+    volumes:
+      # Mount the current directory for development (optional)
+      - .:/app
+    # For GUI applications, you might need to mount X11 socket (Linux only)
+    # Uncomment the following lines if running on Linux with X11 and want visualization
+    # volumes:
+    #   - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    # environment:
+    #   - DISPLAY=${DISPLAY}
+    # network_mode: host
+    
+    # Restart policy
+    restart: unless-stopped
+    
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+          cpus: '0.5'
+
+  # Optional: Add a service for monitoring or logging
+  # You could add services like:
+  # - A web dashboard to monitor the simulation
+  # - A database to store simulation results
+  # - A logging service like ELK stack
+
+# Optional: Define networks
+networks:
+  default:
+    name: drone-simulation-network
