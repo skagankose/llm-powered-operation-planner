@@ -1,4 +1,4 @@
-# LLM Powered Mission Planning for UAV Operations
+# LLM Powered Mission Plannerfor UAV Operations
 
 A sophisticated multi-agent simulation platform where LLM-powered drones explore a grid map, avoid hidden air defense systems, and destroy targets using intelligent pathfinding and risk assessment.
 
