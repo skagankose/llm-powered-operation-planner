@@ -1,8 +1,8 @@
-# 🚁 LLM Powered Mission Planning for UAV Operations
+# LLM Powered Mission Planning for UAV Operations
 
 A sophisticated multi-agent simulation platform where LLM-powered drones explore a grid map, avoid hidden air defense systems, and destroy targets using intelligent pathfinding and risk assessment.
 
-## 🏗️ Architecture
+## Architecture
 
 This project uses a modular architecture organized into logical subdirectories:
 
@@ -37,7 +37,7 @@ This project uses a modular architecture organized into logical subdirectories:
 └── docs/                      # Documentation (future)
 ```
 
-## 🧠 Key Features
+## Key Features
 
 ### **LLM-Powered Agents**
 - **Central Strategist**: GPT-4o controls overall strategy
@@ -59,7 +59,7 @@ This project uses a modular architecture organized into logical subdirectories:
 - **Battery Management**: Low battery forces return to base
 - **Sacrifice Strategies**: Risk vs reward calculations
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. **Setup Environment**
 ```bash
@@ -99,7 +99,7 @@ NUM_DRONES=10                  # Number of drones
 NUM_TARGETS=3                  # Targets to destroy
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 All configuration is handled through environment variables in your `.env` file:
 
@@ -127,13 +127,13 @@ DRONE_BATTERY_MAX=1000.0  # Battery capacity
 DRONE_SCAN_RADIUS=5       # Scanning range
 ```
 
-## 🎮 Controls
+## Controls
 
 - **Close Window**: End simulation
 - **Watch**: Drones move autonomously
 - **Console**: Strategy decisions and events logged
 
-## 📊 Game Mechanics
+## Game Mechanics
 
 ### **Mission Objective**
 Destroy all 3 hidden targets using 5 missiles while minimizing drone losses.
@@ -153,7 +153,7 @@ Destroy all 3 hidden targets using 5 missiles while minimizing drone losses.
 - **Resource Management**: Battery and missile conservation
 - **Adaptive Tactics**: Learn from drone losses
 
-## 🔧 Modules
+## Modules
 
 ### **AI Agents (`src/agents/`)**
 - **`drone_agent.py`** - Individual drone with LLM-powered navigation:
@@ -190,7 +190,7 @@ Destroy all 3 hidden targets using 5 missiles while minimizing drone losses.
   - Simulation parameters
   - LLM and visualization settings
 
-## 🎯 Strategy Tips
+## Strategy Tips
 
 1. **Early Exploration**: Spread drones to cover maximum area
 2. **Active Scanning**: Use ACTIVE mode for exploration drones
@@ -198,7 +198,7 @@ Destroy all 3 hidden targets using 5 missiles while minimizing drone losses.
 4. **Battery Management**: Return to base before critical levels
 5. **Risk Assessment**: Balance safety vs discovery speed
 
-## 🛠️ Development
+## Development
 
 ### **Project Structure Benefits**
 - **Modular Design**: Each package has a specific responsibility
@@ -233,13 +233,13 @@ docker-compose up --build
 docker-compose up -v $(pwd):/app
 ```
 
-## 📈 Performance
+## Performance
 
 - **API Optimization**: Drone LLMs consult every 10 ticks
 - **Efficient Pathfinding**: BFS with early termination
 - **Selective Reporting**: Reduce unnecessary communication
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### **Container Features**
 - **Headless Operation**: Runs without GUI by default (perfect for servers)
@@ -277,7 +277,7 @@ ENABLE_VISUALIZATION=true docker-compose up
 docker-compose -f docker-compose.prod.yml up
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### **API Errors**
 - Check `.env` file has valid `API_KEY`
@@ -300,10 +300,6 @@ docker-compose -f docker-compose.prod.yml up
 - Check Docker and Docker Compose are installed
 - Verify sufficient system resources (4GB+ RAM recommended)
 
-## 📝 License
+## License
 
 Open source - feel free to modify and extend!
-
----
-
-**🎮 Have fun watching your AI drones navigate, survive, and complete their mission!** 
